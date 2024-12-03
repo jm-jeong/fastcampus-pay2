@@ -1,6 +1,5 @@
 package com.fastcampuspay.membership.application.port.in;
 
-import common.SelfValidating;
 import lombok.Builder;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
@@ -8,6 +7,8 @@ import lombok.EqualsAndHashCode;
 import javax.validation.constraints.AssertTrue;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
+
+import com.fastcampuspay.common.SelfValidating;
 
 @Builder
 @Data

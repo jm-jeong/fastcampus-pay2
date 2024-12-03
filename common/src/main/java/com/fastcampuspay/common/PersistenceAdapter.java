@@ -1,15 +1,20 @@
-package common;
+package com.fastcampuspay.common;
+
+import java.lang.annotation.Documented;
+import java.lang.annotation.ElementType;
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
+import java.lang.annotation.Target;
 
 import org.springframework.core.annotation.AliasFor;
 import org.springframework.stereotype.Component;
-
-import java.lang.annotation.*;
 
 @Target({ElementType.TYPE})
 @Retention(RetentionPolicy.RUNTIME)
 @Documented
 @Component
-public @interface UseCase {
+public @interface PersistenceAdapter {
+
   /**
    * The value may indicate a suggestion for a logical component name,
    * to be turned into a Spring bean in case of an autodetected component.
@@ -17,5 +22,4 @@ public @interface UseCase {
    */
   @AliasFor(annotation = Component.class)
   String value() default "";
-
 }
